@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import { animateScroll, Link } from 'react-scroll'
 // components
 
 import IndexDropdown from '../Dropdowns/IndexDropdown'
@@ -8,15 +8,12 @@ export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false)
   return (
     <>
-      <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow'>
+      <nav className='top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 navbar-expand-lg bg-white shadow'>
         <div className='container px-4 mx-auto flex flex-wrap items-center justify-between'>
           <div className='w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start'>
             <Link href='/'>
-              <a
-                className='text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'
-                href='#pablo'
-              >
-                Notus NextJS
+              <a className='text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase'>
+                <img src='/images/logo.png' alt='Taksim Diesel' width='80' />
               </a>
             </Link>
             <button
@@ -63,22 +60,18 @@ export default function Navbar(props) {
                 </a>
               </li>
               <li className='flex items-center'>
-                <a
-                  className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F'
-                  target='_blank'
-                >
-                  gallery
-                </a>
+                <Link to='gallery' spy={true} smooth={true} offset={-50}>
+                  <a className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'>
+                    gallery
+                  </a>
+                </Link>
               </li>
               <li className='flex items-center'>
-                <a
-                  className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F'
-                  target='_blank'
-                >
-                  contact us
-                </a>
+                <Link to='contact' spy={true} smooth={true} offset={-50}>
+                  <a className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'>
+                    contact us
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>
