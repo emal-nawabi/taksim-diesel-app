@@ -65,12 +65,11 @@ export default function Footer() {
                 </span>
                 <ul className='list-unstyled'>
                   <li>
-                    <a
-                      className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm'
-                      href='#'
-                    >
-                      Products
-                    </a>
+                    <Link to='product' spy={true} smooth={true} offset={-50}>
+                      <a className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm'>
+                        Products
+                      </a>
+                    </Link>
                   </li>
                   <li>
                     <a
@@ -81,14 +80,14 @@ export default function Footer() {
                     </a>
                   </li>
                   <li>
-                    <Link to='gallery' spy={true} smooth={true}>
+                    <Link to='gallery' spy={true} smooth={true} offset={-50}>
                       <a className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm'>
                         Gallery
                       </a>
                     </Link>
                   </li>
                   <li>
-                    <Link to='contact' spy={true} smooth={true}>
+                    <Link to='contact' spy={true} smooth={true} offset={-50}>
                       <a className='text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm'>
                         Contact us
                       </a>

@@ -35,27 +35,20 @@ export default function Navbar(props) {
               <li className='flex items-center'>
                 <a
                   className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F'
-                  target='_blank'
+                  href='/'
                 >
                   home
                 </a>
               </li>
               <li className='flex items-center'>
-                <a
-                  className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F'
-                  target='_blank'
-                >
-                  products
-                </a>
+                <Link to='product' spy={true} smooth={true} offset={-50}>
+                  <a className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'>
+                    products
+                  </a>
+                </Link>
               </li>
               <li className='flex items-center'>
-                <a
-                  className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'
-                  href='https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdemos.creative-tim.com%2Fnotus-nextjs%2F'
-                  target='_blank'
-                >
+                <a className='hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold'>
                   our dealers
                 </a>
               </li>

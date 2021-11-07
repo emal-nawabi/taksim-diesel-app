@@ -5,179 +5,219 @@ import Link from 'next/link'
 import IndexNavbar from '../components/Navbars/IndexNavbar'
 import Footer from '../components/Footers/Footer.js'
 import TinySlider from '../components/TinySlider'
+import Slider from '../components/Slider'
 
 export default function Index() {
   return (
-    <>
+    <div className='relative'>
       <IndexNavbar fixed />
       <section className='header relative pt-16 items-center flex h-screen max-h-860-px'>
+        <div className='absolute top-0 -left-12 md:left-0 w-full h-full'>
+          <Slider />
+        </div>
         <div className='container mx-auto items-center flex flex-wrap'>
           <div className='w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4'></div>
         </div>
-        <img
-          className='absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px'
-          src='/img/pattern_nextjs.png'
-          alt='...'
-        />
+        <div classNamE='relative'>
+          <img
+            className='absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px'
+            src='/img/pattern_nextjs.png'
+            alt='...'
+          />
+        </div>
       </section>
 
-      <section className='mt-48 md:mt-40 relative bg-blueGray-100'>
-        <div className='container mx-auto overflow-hidden pb-20'>
-          <div className='flex flex-wrap items-center pt-32'>
-            <div className='w-full md:w-6/12 px-4 mr-auto ml-auto mt-32'>
-              <div className='justify-center flex flex-wrap relative'>
-                <div className='my-4 w-full lg:w-6/12 px-4'>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/svelte/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-red-600 shadow-lg rounded-lg text-center p-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/svelte.jpg'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>Svelte</p>
-                    </div>
-                  </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/react/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-lightBlue-500 shadow-lg rounded-lg text-center p-8 mt-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/react.jpg'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>ReactJS</p>
-                    </div>
-                  </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-blueGray-700 shadow-lg rounded-lg text-center p-8 mt-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/nextjs.jpg'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>NextJS</p>
-                    </div>
-                  </a>
-                </div>
-                <div className='my-4 w-full lg:w-6/12 px-4 lg:mt-16'>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-yellow-500 shadow-lg rounded-lg text-center p-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/js.png'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>JavaScript</p>
-                    </div>
-                  </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/angular/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-red-700 shadow-lg rounded-lg text-center p-8 mt-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/angular.jpg'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>Angular</p>
-                    </div>
-                  </a>
-                  <a
-                    href='https://www.creative-tim.com/learning-lab/tailwind/vue/alerts/notus?ref=vtw-index'
-                    target='_blank'
-                  >
-                    <div className='bg-emerald-500 shadow-lg rounded-lg text-center p-8 mt-8'>
-                      <img
-                        alt='...'
-                        className='shadow-md rounded-full max-w-full w-16 mx-auto p-2 bg-white'
-                        src='https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/vue.jpg'
-                      />
-                      <p className='text-lg text-white mt-4 font-semibold'>Vue.js</p>
-                    </div>
-                  </a>
+      <section id='product' className='mt-0 md:mt-40 pt-16 text-center relative bg-blueGray-100'>
+        <div class='container pb-8'>
+          <div class='text-center'>
+            <h2
+              class='mb-12 section-heading wow fadeInDown text-3xl text-center'
+              data-wow-delay='0.3s'
+            >
+              Products
+            </h2>
+          </div>
+          <div class='flex flex-wrap justify-center'>
+            <div class='max-w-sm sm:w-1/2 md:w-1/2 lg:w-1/3'>
+              <div class='team-item p-8'>
+                <div class='team-img relative'>
+                  <img class='w-full h-full' src='/images/products/1.jpeg' alt='' />
+                  <div class='team-overlay'>
+                    <ul class='flex justify-center'>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-indigo-500'>
+                          <i class='lni lni-facebook-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-blue-400'>
+                          <i class='lni lni-twitter-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-red-500'>
+                          <i class='lni lni-instagram-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div className='w-full md:w-4/12 px-12 md:px-4 ml-auto mr-auto mt-48'>
-              <div className='text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-white'>
-                <i className='fas fa-drafting-compass text-xl'></i>
+            <div class='max-w-sm sm:w-1/2 md:w-1/2 lg:w-1/3'>
+              <div class='team-item p-8 w-full h-full'>
+                <div class='team-img relative w-full h-full'>
+                  <img class='w-full h-full object-cover' src='/images/products/2.jpeg' alt='' />
+                  <div class='team-overlay'>
+                    <ul class='flex justify-center'>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-indigo-500'>
+                          <i class='lni lni-facebook-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-blue-400'>
+                          <i class='lni lni-twitter-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-red-500'>
+                          <i class='lni lni-instagram-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <h3 className='text-3xl mb-2 font-semibold leading-normal'>Javascript Components</h3>
-              <p className='text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600'>
-                In order to create a great User Experience some components require JavaScript. In
-                this way you can manipulate the elements on the page and give more options to your
-                users.
-              </p>
-              <p className='text-lg font-light leading-relaxed mt-4 mb-4 text-blueGray-600'>
-                We created a set of Components that are dynamic and come to help you.
-              </p>
-              <div className='block pb-6'>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Alerts
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Dropdowns
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Menus
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Modals
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Navbars
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Popovers
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Tabs
-                </span>
-                <span className='text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-white uppercase last:mr-0 mr-2 mt-2'>
-                  Tooltips
-                </span>
+            </div>
+
+            <div class='max-w-sm sm:w-1/2 md:w-1/2 lg:w-1/3'>
+              <div class='team-item p-8'>
+                <div class='team-img relative'>
+                  <img class='w-full h-full' src='/images/products/3.jpeg' alt='' />
+                  <div class='team-overlay'>
+                    <ul class='flex justify-center'>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-indigo-500'>
+                          <i class='lni lni-facebook-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-blue-400'>
+                          <i class='lni lni-twitter-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-red-500'>
+                          <i class='lni lni-instagram-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              <a
-                href='https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index'
-                target='_blank'
-                className='font-bold text-blueGray-700 hover:text-blueGray-500 ease-linear transition-all duration-150'
-              >
-                View all <i className='fa fa-angle-double-right ml-1 leading-relaxed'></i>
-              </a>
+            </div>
+
+            <div class='max-w-sm sm:w-1/2 md:w-1/2 lg:w-1/3'>
+              <div class='team-item p-8'>
+                <div class='team-img relative'>
+                  <img class='w-full h-full' src='/images/products/4.jpeg' alt='' />
+                  <div class='team-overlay'>
+                    <ul class='flex justify-center'>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-indigo-500'>
+                          <i class='lni lni-facebook-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-blue-400'>
+                          <i class='lni lni-twitter-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-red-500'>
+                          <i class='lni lni-instagram-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class='max-w-sm sm:w-1/2 md:w-1/2 lg:w-1/3'>
+              <div class='team-item p-8'>
+                <div class='team-img relative'>
+                  <img class='w-full h-full' src='/images/products/5.jpeg' alt='' />
+                  <div class='team-overlay'>
+                    <ul class='flex justify-center'>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-indigo-500'>
+                          <i class='lni lni-facebook-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-blue-400'>
+                          <i class='lni lni-twitter-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-red-500'>
+                          <i class='lni lni-instagram-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class='max-w-sm sm:w-1/2 md:w-1/2 lg:w-1/3'>
+              <div class='team-item p-8'>
+                <div class='team-img relative'>
+                  <img class='w-full h-full' src='/images/products/6.jpeg' alt='' />
+                  <div class='team-overlay'>
+                    <ul class='flex justify-center'>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-indigo-500'>
+                          <i class='lni lni-facebook-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-blue-400'>
+                          <i class='lni lni-twitter-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                      <li class='mx-1'>
+                        <a href='#' class='social-link hover:bg-red-500'>
+                          <i class='lni lni-instagram-original' aria-hidden='true'></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className='bg-gray-800 py-16' id='gallery'>
+        <div className='bg-primary_dark py-24' id='gallery'>
           <div className='container'>
             <TinySlider />
           </div>
         </div>
       </section>
 
-      <section className='py-16 bg-blueGray-600 overflow-hidden' id='contact'>
+      <section className='py-16 bg-black overflow-hidden' id='contact'>
         <div className='container mx-auto pb-44'>
           <h2 className='text-white text-3xl text-center mb-6'>Contact</h2>
           <div className='flex flex-wrap justify-center'>
-            <div className='w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-8'>
+            <div className='w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-8 mb-12 md:mb-0'>
               <h3 className='text-xl mb-6 font-semibold leading-normal text-white uppercase'>
                 contact form
               </h3>
               <form>
-                <div className='w-full flex'>
+                <div className='w-full flex flex-wrap md:flex-nowrap'>
                   <input className='mr-2 mb-6 rounded-md flex-1' type='text' placeholder='Name' />
                   <input className='mr-2 mb-6 rounded-md flex-1' type='email' placeholder='Email' />
                 </div>
@@ -265,6 +305,6 @@ export default function Index() {
         </div>
       </section>
       <Footer />
-    </>
+    </div>
   )
 }

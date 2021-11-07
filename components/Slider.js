@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {
   CarouselProvider,
   Slider,
@@ -10,81 +9,50 @@ import {
   Dot,
 } from 'pure-react-carousel'
 
-const SliderComponent = () => {
+const Slideshow = () => {
   return (
     <CarouselProvider
       orientation={'horizontal'}
-      totalSlides={5}
-      hasMasterSpinner={true}
+      naturalSlideWidth={200}
+      naturalSlideHeight={250}
+      totalSlides={3}
       isPlaying={true}
       interval={4000}
       infinite={true}
-      visibleSlides={3}
-      totalSlides={6}
-      step={3}
-      naturalSlideWidth={388}
-      naturalSlideHeight={290}
-      className='relative'
+      className='relative w-full h-full'
     >
-      <Slider>
-        <Slide className='pr-8' index={0}>
-          <Image hasMasterSpinner={true} src='/images/1.jpeg' />
+      <Slider className='w-96 h-96 mt-28 ml-20'>
+        <Slide className='w-80 h-52' index={0}>
+          <Image className='w-80 h-52' src='/images/products/1.jpeg' />
         </Slide>
-        <Slide className='pr-8' index={1}>
-          <Image hasMasterSpinner={true} src='/images/2.jpeg' />
+        <Slide className='w-80 h-52' index={1}>
+          <Image className='w-80 h-52' src='/images/products/4.jpeg' />
         </Slide>
-        <Slide className='pr-8' index={2}>
-          <Image hasMasterSpinner={true} src='/images/3.jpeg' />
-        </Slide>
-        <Slide className='pr-8' index={3}>
-          <Image hasMasterSpinner={true} src='/images/4.jpeg' />
-        </Slide>
-        <Slide className='pr-8' index={4}>
-          <Image hasMasterSpinner={true} src='/images/5.jpeg' />
-        </Slide>
-        <Slide className='pr-8' index={5}>
-          <Image hasMasterSpinner={true} src='/images/6.jpeg' />
+        <Slide className='w-80 h-52' index={2}>
+          <Image className='w-80 h-52' src='/images/products/5.jpeg' />
         </Slide>
       </Slider>
-      <div className='absolute -bottom-8 left-1/2 transform -translate-x-1/2 flex'>
+      <div className='absolute bottom-40 left-16 flex'>
         <div className='border lg:border-2 border-primary opacity-60 mx-1 flex rounded-1/2'>
           <Dot
             slide={0}
-            className='bg-primary h-1 w-1 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
+            className='bg-primary h-1 lg:h-2 w-1 lg:w-2 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
           ></Dot>
         </div>
         <div className='border lg:border-2 border-primary opacity-60 mx-1 flex rounded-1/2'>
           <Dot
             slide={1}
-            className='bg-primary h-1 w-1 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
+            className='bg-primary h-1 lg:h-2 w-1 lg:w-2 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
           ></Dot>
         </div>
         <div className='border lg:border-2 border-primary opacity-60 mx-1 flex rounded-1/2'>
           <Dot
             slide={2}
-            className='bg-primary h-1 w-1 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
-          ></Dot>
-        </div>
-        <div className='border lg:border-2 border-primary opacity-60 mx-1 flex rounded-1/2'>
-          <Dot
-            slide={3}
-            className='bg-primary h-1 w-1 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
-          ></Dot>
-        </div>
-        <div className='border lg:border-2 border-primary opacity-60 mx-1 flex rounded-1/2'>
-          <Dot
-            slide={4}
-            className='bg-primary h-1 w-1 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
-          ></Dot>
-        </div>
-        <div className='border lg:border-2 border-primary opacity-60 mx-1 flex rounded-1/2'>
-          <Dot
-            slide={5}
-            className='bg-primary h-1 w-1 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
+            className='bg-primary h-1 lg:h-2 w-1 lg:w-2 p-0 m-px lg:m-0.5 rounded-1/2 opacity-60'
           ></Dot>
         </div>
       </div>
     </CarouselProvider>
   )
 }
-export default SliderComponent
+export default Slideshow
